@@ -1,0 +1,31 @@
+DAY 02:
+
+1.  npm is a package manager.
+2.  package.json is a configuration from npm.
+3.  when we install a package, it is installed as a dependency. But this dependency can have other dependencies and those dependencies inturn can have other dependencies. This is called transitive dependencies.
+4.  npm installs the dependencies whereas npx is used to execute any package that is installed by npm.
+5.  In this project we have included react by a cdn link. But this approach is not recommended coz it need to make another call to some unpkg.com to get react, second con is what happens it the react version is upgraded, then we need to update cdn manually.
+    that's why we need to manage react as a dependency via npm.
+6.  In order to tell browser that the script(app.js) is not a normal browser script we need to have attribute type=module so that we can use import/export in our app.js
+
+7.  What Parcel does for us:
+-   Dev Build
+-   Gets up the local server
+-   HMR = Hot Module Replacement
+-   It works on file waching algo, written in c++
+-   Caching for faster builds
+-   Image Optimization
+-   Minification
+-   Bundling
+-   Compression
+-   Consisting Hashing
+-   Code Splitting
+-   Differential Bundling: Supports older browsers
+-   Diagnostics: displaying beautiful code errors
+-   Error handling
+-   HTTPs
+-   Tree Shaking: remove unused code
+-   Different production and development builds
+- Note: we need to remove main from package.json so that entry files do not collide.
+
+8.  Add "browserslist" so as to config which versions of browsers should be defenitely supported. Parcel takes care of this when you add browserslist property in package.json

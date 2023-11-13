@@ -1,0 +1,32 @@
+{
+  "name": "react-in-depth",
+  "version": "1.0.0",
+  "description": "Awesome learning of React",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HuzefaBadshah/React-in-depth.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Huzefa Badshah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HuzefaBadshah/React-in-depth/issues"
+  },
+  "homepage": "https://github.com/HuzefaBadshah/React-in-depth#readme",
+  "devDependencies": {
+    "parcel": "^2.10.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

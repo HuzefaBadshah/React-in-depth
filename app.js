@@ -1,8 +1,11 @@
-const parent = React.createElement('div', { class: 'parent' }, [
-    React.createElement('section', { class: 'feature1' },
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const parent = React.createElement('div', { className: 'parent' }, [
+    React.createElement('section', { className: 'feature1' },
         React.createElement('p', {}, 'I am a feature 1')
     ),
-    React.createElement('section', { class: 'feature2' },
+    React.createElement('section', { className: 'feature2' },
         React.createElement('p', {}, 'I am a feature 2')
     )
 ])
