@@ -1,0 +1,10 @@
+npm start === npm run start
+
+React element created by React.createElement is an object
+When we render this element to DOM it becomes an html element
+
+extensions we can use:
+- bracket pair colorizer
+- eslint for linting
+- prettier to fromat the code
+- Better comment to format comments

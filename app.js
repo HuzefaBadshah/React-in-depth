@@ -1,15 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parent = React.createElement('div', { className: 'parent' }, [
-    React.createElement('section', { className: 'feature1' },
-        React.createElement('p', {}, 'I am a feature 1')
-    ),
-    React.createElement('section', { className: 'feature2' },
-        React.createElement('p', {}, 'I am a feature 2')
-    )
-])
+// const heading = React.createElement('h1', { id: 'heading' }, 'Hello Huzefa!');
 
-const rootEl = ReactDOM.createRoot(document.getElementById('root'));
+const heading = <h1 className="heading">Hello Heading</h1>
 
-rootEl.render(parent);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(heading);
