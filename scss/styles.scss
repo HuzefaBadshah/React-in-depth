@@ -46,24 +46,35 @@ body {
 
 .body {
   margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  // display: flex;
+  // flex-direction: column;
+  // gap: 15px;
 }
+
+.filter-btn {
+  padding: 10px;
+  background-color: #fcfc8d;
+  font-size: 14px;
+}
+
 .res-container {
   display: flex;
   flex-wrap: wrap;
 }
 
 .res-card {
-  width: 200px;
-  height: 300px;
+  width: 250px;
   border: 1px solid black;
   border-radius: 3px;
   box-shadow: 0 8px 20px rgba(black, 0.35);
+  &:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
 
   &__logo {
     img {
+      height: 170px;
       width: 100%;
     }
   }
