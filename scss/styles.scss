@@ -55,6 +55,18 @@ body {
   padding: 10px;
   background-color: #fcfc8d;
   font-size: 14px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.search {
+  input[type='text'] {
+    padding: 5px;
+    font-size: 20px;
+    border: 1px solid #ff5757;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
 }
 
 .res-container {
