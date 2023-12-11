@@ -91,3 +91,14 @@ body {
     }
   }
 }
+
+.menu {
+  ul {
+    list-style: none;
+    display: inline-block;
+
+    li:not(:last-child) {
+      margin: 15px 0;
+    }
+  }
+}

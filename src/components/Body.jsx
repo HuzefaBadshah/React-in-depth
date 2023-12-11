@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 // import { restaurants } from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
+import { proxy } from "../utils/constants";
+import { Link } from "react-router-dom";
 
 
 const Body = () => {
@@ -14,9 +16,9 @@ const Body = () => {
     }, []);
 
     async function swiggyData() {
-        const res = await fetch('https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5800357&lng=77.32741709999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+        const res = await fetch(`${proxy}https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5800357&lng=77.32741709999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`);
         const { data } = await res.json();
-        const restaurants = data.cards[5].card.card.gridElements.infoWithStyle.restaurants
+        const restaurants = data.cards[5].card.card.gridElements.infoWithStyle.restaurants;
         setRes(restaurants);
         setResFiltered(restaurants);
     }
@@ -41,7 +43,9 @@ const Body = () => {
             <button className="filter-btn" onClick={handleTopRated}>Top Rated</button>
 
             <div className="res-container">
-                {resFiltered.map(({ info }) => <RestaurantCard key={info.id} info={info} />)}
+                {resFiltered.map(({ info }) => <Link to={`menu/${info.id}`}>
+                    <RestaurantCard key={info.id} info={info} />
+                </Link>)}
             </div>
         </div>
     )
