@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import Body from "./src/components/Body";
 import Header from "./src/components/Header";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
-import About from "./src/components/About";
 import Contact from "./src/components/Contact";
 import Error from "./src/components/Error";
 import RestaurantMenu from "./src/components/RestaurantMenu";
+import AboutClass from "./src/components/About";
 
 
 const AppLayout = () => {
@@ -29,7 +29,7 @@ const appRouter = createBrowserRouter([
             },
             {
                 path: '/about',
-                element: <About />
+                element: <AboutClass name="Huzefa" location="Chennai" />
             },
             {
                 path: '/contact',

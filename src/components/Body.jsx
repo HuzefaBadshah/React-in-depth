@@ -15,10 +15,10 @@ const Body = () => {
         console.log('useEffect called!');
     }, []);
 
-    async function swiggyData() {
-        const res = await fetch(`${proxy}https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5800357&lng=77.32741709999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`);
+    async function swiggyData() { //${proxy}
+        const res = await fetch(`https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.7195687&lng=75.8577258&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`);
         const { data } = await res.json();
-        const restaurants = data.cards[5].card.card.gridElements.infoWithStyle.restaurants;
+        const restaurants = data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
         setRes(restaurants);
         setResFiltered(restaurants);
     }

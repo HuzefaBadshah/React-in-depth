@@ -7,8 +7,8 @@ const RestaurantMenu = () => {
     const { resId } = useParams();
 
     useEffect(() => {
-        (async function () {
-            const res = await fetch(`${proxy}https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.5800357&lng=77.32741709999999&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
+        (async function () { //${proxy}
+            const res = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.5800357&lng=77.32741709999999&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
 
             const { data } = await res.json();
 
