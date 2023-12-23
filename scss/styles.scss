@@ -31,6 +31,14 @@ body {
   .nav-items {
     padding-left: 0;
     padding-right: 0;
+
+    ul > li.online {
+      color: #5bff15;
+    }
+    ul > li.offline {
+      color: #ff2a2a;
+    }
+
     ul {
       display: flex;
       list-style: none;

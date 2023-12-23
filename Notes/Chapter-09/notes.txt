@@ -1,0 +1,1 @@
+- Chuncking === Code Splitting === Dynamic  Bundling === Lazy Loading === On Demand Loading === Dynamic import : This is a process to breack main js bundle into chunks.

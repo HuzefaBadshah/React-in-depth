@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import useOnlineHook from "../utils/useOnlineHook";
 
 const Header = () => {
+    const isOnline = useOnlineHook();
     return (
         <div className="header">
             <div className="logo-conainer">
@@ -8,6 +10,7 @@ const Header = () => {
             </div>
             <nav className="nav-items">
                 <ul>
+                    <li className={isOnline ? 'online' : 'offline'}>{isOnline ? 'ONLINE' : 'OFFLINE'}</li>
                     <li><Link to='/'>Home</Link> </li>
                     <li><Link to='/about'>About Us</Link></li>
                     <li><Link to='/contact'>Contact Us</Link></li>
