@@ -110,3 +110,69 @@ body {
     }
   }
 }
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  .details-content {
+    width: 50%;
+
+    &__veg-info {
+      color: #5bff15;
+    }
+
+    &__non-veg-info {
+      color: #ff2a2a;
+    }
+  }
+
+  .details-img {
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: 500;
+      padding: 5px;
+      cursor: pointer;
+
+      span {
+        color: #ef04d8;
+      }
+      &:hover {
+        span {
+          color: #65ff29;
+        }
+      }
+    }
+  }
+}
+
+.cart {
+  &__details {
+    border: 1px solid black;
+    border-radius: 2px;
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+
+  &__clear {
+    button {
+      margin: 0 auto;
+      font-size: 20px;
+      font-weight: 600;
+      color: #30332f;
+      padding: 6px;
+      border-radius: 3px;
+    }
+  }
+}

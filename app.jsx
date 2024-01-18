@@ -7,6 +7,9 @@ import Contact from "./src/components/Contact";
 import Error from "./src/components/Error";
 import RestaurantMenu from "./src/components/RestaurantMenu";
 import inputContext from "./src/context/inputContext";
+import { Provider } from "react-redux";
+import appStore from "./src/store/appStore";
+import Cart from "./src/components/Cart";
 // import AboutClass from "./src/components/About";
 
 const AboutClass = lazy(() => import('./src/components/About'));
@@ -15,13 +18,15 @@ const AppLayout = () => {
     const [contextInput, setContextInput] = useState('');
     const { contextInputValue } = useContext(inputContext)
     return (
-        <div className="app">
-            <Header />
-            <input style={{ border: '1px solid blue', padding: '5px', color: 'red', marginTop: '20px' }} type="text" onChange={(e) => setContextInput(e.target.value)} value={contextInput} />
-            <inputContext.Provider value={{ contextInputValue: contextInput || contextInputValue }}>
-                <Outlet />
-            </inputContext.Provider>
-        </div>
+        <Provider store={appStore}>
+            <div className="app">
+                <Header />
+                <input style={{ border: '1px solid blue', padding: '5px', color: 'red', marginTop: '20px' }} type="text" onChange={(e) => setContextInput(e.target.value)} value={contextInput} />
+                <inputContext.Provider value={{ contextInputValue: contextInput || contextInputValue }}>
+                    <Outlet />
+                </inputContext.Provider>
+            </div>
+        </Provider>
     )
 }
 
@@ -47,6 +52,10 @@ const appRouter = createBrowserRouter([
             {
                 path: '/menu/:resId',
                 element: <RestaurantMenu />
+            },
+            {
+                path: '/cart',
+                element: <Cart />
             }
         ],
         errorElement: <Error />

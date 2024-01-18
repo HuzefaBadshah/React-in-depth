@@ -1,0 +1,22 @@
+# Redux Toolkit
+- Install @reduxjs/toolki and react-redux
+- Build your own store
+- Connect the store to our application
+- Slice (cart slice)
+- dispatch(action)
+- Selector
+
+
+# Performance
+
+- Subscribe to the specific portion of the store, coz we don't want whole store but only a specific slice to be subscribed.
+
+# Important Note about Reducers
+
+- Slice can have multiple reducers, therefore property name is reducers
+- Store will have one reducer, therefore property name is reducer
+
+Redux toolkit uses Immer to mutate state behind the scenes
+
+Learn about RTK Query that we use as replacement for middlewares and thunks
+Explore Redux toolkit
