@@ -1,0 +1,120 @@
+body {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+.app {
+  margin: 10px 15px 0 15px; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2); }
+  .header .logo-conainer img {
+    height: 108px; }
+  .header .nav-items {
+    padding-left: 0;
+    padding-right: 0; }
+    .header .nav-items ul > li.online {
+      color: #5bff15; }
+    .header .nav-items ul > li.offline {
+      color: #ff2a2a; }
+    .header .nav-items ul {
+      display: flex;
+      list-style: none;
+      font-size: 20px; }
+      .header .nav-items ul li:not(:last-child) {
+        padding-right: 18px; }
+
+.body {
+  margin-top: 40px; }
+
+.filter-btn {
+  padding: 10px;
+  background-color: #fcfc8d;
+  font-size: 14px;
+  margin-bottom: 20px;
+  border-radius: 6px; }
+
+.search input[type='text'] {
+  padding: 5px;
+  font-size: 20px;
+  border: 1px solid #ff5757;
+  border-radius: 3px;
+  margin-bottom: 20px; }
+
+.res-container {
+  display: flex;
+  flex-wrap: wrap; }
+
+.res-card {
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35); }
+  .res-card:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 30px; }
+  .res-card__logo img {
+    height: 170px;
+    width: 100%; }
+
+.menu ul {
+  list-style: none;
+  display: inline-block; }
+  .menu ul li:not(:last-child) {
+    margin: 15px 0; }
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden; }
+  .details .details-content {
+    width: 50%; }
+    .details .details-content__veg-info {
+      color: #5bff15; }
+    .details .details-content__non-veg-info {
+      color: #ff2a2a; }
+  .details .details-img {
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; }
+    .details .details-img button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: 500;
+      padding: 5px;
+      cursor: pointer; }
+      .details .details-img button span {
+        color: #ef04d8; }
+      .details .details-img button:hover span {
+        color: #65ff29; }
+
+.cart__details {
+  border: 1px solid black;
+  border-radius: 2px;
+  margin-top: 20px;
+  margin-bottom: 24px; }
+
+.cart__clear button {
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 600;
+  color: #30332f;
+  padding: 6px;
+  border-radius: 3px; }

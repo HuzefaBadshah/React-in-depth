@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import useOnlineHook from "../utils/useOnlineHook";
+import { useSelector } from "react-redux";
 
 const Header = () => {
     const isOnline = useOnlineHook();
+    const totalCartItems = useSelector((store) => store.cart.items.length);
     return (
         <div className="header">
             <div className="logo-conainer">
@@ -14,7 +16,7 @@ const Header = () => {
                     <li><Link to='/'>Home</Link> </li>
                     <li><Link to='/about'>About Us</Link></li>
                     <li><Link to='/contact'>Contact Us</Link></li>
-                    <li><Link to='/cart'>Cart</Link></li>
+                    <li><Link to='/cart'>Cart [{totalCartItems}]</Link></li>
                 </ul>
             </nav>
         </div>

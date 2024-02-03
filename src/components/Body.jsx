@@ -43,9 +43,12 @@ const Body = () => {
             <button className="filter-btn" onClick={handleTopRated}>Top Rated</button>
 
             <div className="res-container">
-                {resFiltered?.map(({ info }) => <Link key={info.id} to={`menu/${info.id}`}>
-                    <RestaurantCard info={info} />
-                </Link>)}
+                {resFiltered && resFiltered?.map(({ info }) => {
+                    console.log('info: ', info);
+                    return <Link key={info.id} to={`menu/${info.id}`}>
+                        <RestaurantCard info={info} />
+                    </Link>
+                })}
             </div>
         </div>
     )
