@@ -18,7 +18,7 @@ const Body = () => {
     async function swiggyData() {
         const res = await fetch(homePageData);
         const { data } = await res.json();
-        const restaurants = data.cards[1].card.card.gridElements.infoWithStyle.restaurants || data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+        const restaurants = data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || data.cards[3].card.card.gridElements.infoWithStyle.restaurants
         setRes(restaurants);
         setResFiltered(restaurants);
     }
@@ -44,7 +44,6 @@ const Body = () => {
 
             <div className="res-container">
                 {resFiltered && resFiltered?.map(({ info }) => {
-                    console.log('info: ', info);
                     return <Link key={info.id} to={`menu/${info.id}`}>
                         <RestaurantCard info={info} />
                     </Link>

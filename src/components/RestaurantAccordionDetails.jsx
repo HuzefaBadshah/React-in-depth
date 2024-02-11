@@ -10,7 +10,7 @@ function RestaurantAccordionDetails({ detail }) {
         dispatch(addItem(item));
     }
     return (
-        <div className="details">
+        <div data-testid='accordionDetails' className="details">
             <div className="details-content">
                 <div className={detail.isVeg === 1 ? "details-content__veg-info" : "details-content__non-veg-info"}>{detail.isVeg === 1 ? 'VEG' : 'NON-VEG'}</div>
                 <div className="details-heading">{detail.category}</div>

@@ -4,7 +4,7 @@ import RestaurantAccordionDetails from "./RestaurantAccordionDetails";
 function RestaurantAccordion({ title, info, accClickHandler, showDetails }) {
     return (
         <div className="accordion">
-            <div className="header" onClick={accClickHandler}>
+            <div data-testid='accordion-header' className="header" onClick={accClickHandler}>
                 <h2>{title}({info.length})</h2>
                 <span>{showDetails ? '🔼' : '🔽'}</span>
             </div>

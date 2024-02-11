@@ -41,7 +41,7 @@ const RestaurantMenu = () => {
 
                 itemCards = itemCards.map(({ card: { info } }) => info);
                 return <RestaurantAccordion key={title} resName={resName} title={title} info={itemCards} subtitle={subtitle} accClickHandler={() => {
-                    console.log('index, showAcc: ', index, showAcc);
+                    //console.log('index, showAcc: ', index, showAcc);
                     (index === showAcc) ? setShowAcc(null) : setShowAcc(index);
                 }} showDetails={index === showAcc} />
             })}
